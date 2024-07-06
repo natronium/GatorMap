@@ -1,4 +1,4 @@
-import {pot_layer, chest_layer, race_layer, npc_layer, npc_path_layer} from "./markers.js";
+import { pot_layer, chest_layer, race_layer, npc_layer, npc_path_layer } from "./markers.js";
 
 //unmapped, tl corner = 85,-180, BR= -85, 180
 //ingame coords TL= -165, 315. BR = 315, -165
@@ -27,7 +27,7 @@ let map = L.map('map', {
 L.tileLayer('maptiles/{z}/{x}_{y}.png', {
   maxZoom: 7,
   noWrap: true,
-  bounds: [[315,-165], [-165, 315]]
+  bounds: [[315, -165], [-165, 315]]
 }).addTo(map);
 
 let layerControl = L.control.layers({}, {

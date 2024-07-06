@@ -3,10 +3,10 @@ const papaPromise = (importFile) => new Promise((resolve, reject) => {
         download: true,
         header: true,
         dynamicTyping: true,
-        complete: function(results) {
+        complete: function (results) {
             resolve(results);
         },
-        error: function(error) {
+        error: function (error) {
             reject(error);
         }
     });
