@@ -39,6 +39,13 @@ let layerControl = L.control.layers({}, {
   "Grid": graticule_layer,
 }).addTo(map);
 
+let searchable_layers = L.layerGroup([pot_layer, chest_layer, race_layer, npc_layer]);
+
+L.control.search({
+  layer: searchable_layers,
+  initial: false,
+}).addTo(map);
+
 // Patch first to avoid longitude wrapping.
 L.Control.Coordinates.include({
   _update: function (evt) {
