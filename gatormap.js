@@ -24,7 +24,8 @@ let map = L.map('map', {
 
 L.tileLayer('maptiles/{z}/{x}_{y}.png', {
   maxZoom: 7,
-  noWrap: true
+  noWrap: true,
+  bounds: [[315,-165], [-165, 315]]
 }).addTo(map);
 
 let layerControl = L.control.layers({}, {
