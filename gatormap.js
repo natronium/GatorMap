@@ -1,3 +1,5 @@
+import {pot_layer, chest_layer, race_layer, npc_layer, npc_path_layer} from "./markers.js";
+
 //unmapped, tl corner = 85,-180, BR= -85, 180
 //ingame coords TL= -165, 315. BR = 315, -165
 

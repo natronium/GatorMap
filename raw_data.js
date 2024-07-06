@@ -1,4 +1,4 @@
-let pot_info = [
+export const pot_info = [
     { pos: [-144.2558, -22.04079], id: 1584 },
     { pos: [15.2118, 42.05864], id: 1543 },
     { pos: [262.0466, -34.11095], id: 190 },
@@ -93,7 +93,7 @@ let pot_info = [
     { pos: [244.3778, 109.6914], id: 1638 },
     { pos: [98.36263, 179.172], id: 656 },
 ];
-let chest_info = [
+export const chest_info = [
     { pos: [-50.70266, 282.016], id: 202 },
     { pos: [17.56603, 159.1451], id: 2027 },
     { pos: [237.288, -104.6555], id: 433 },
@@ -108,7 +108,7 @@ let chest_info = [
     { pos: [273.52, -20.10001], id: 185 },
     { pos: [130.5206, 235.0663], id: 1361 },
 ];
-let race_info = [
+export const race_info = [
     { pos: [218.0802, -41.77077], id: 392 },
     { pos: [132.5355, 114.3341], id: 1746 },
     { pos: [252.8003, 159.0414], id: 814 },
@@ -119,7 +119,7 @@ let race_info = [
     { pos: [-43.58, -73.5], id: 1400 },
     { pos: [217.0271, -22.77831], id: 383 },
 ];
-let npc_info = [
+export const npc_info = [
     { pos: [104.32, 47.971], name: "Rock Fox" },
     { pos: [191.759, 90.029], name: "Monkey" },
     { pos: [62.871, 237.2092], name: "Monkey" },
@@ -175,7 +175,7 @@ let npc_info = [
     { pos: [130.888, 186.7545], name: "Awkward Friendly Mouse" },
     { pos: [-57.15413, 3.653141], name: "sleeping in pot hook" },
 ];
-let npc_path_info = [
+export const npc_path_info = [
     {
         name: "Directions Deer/Path", path_points: [
             [104.8376, -7.032074],
