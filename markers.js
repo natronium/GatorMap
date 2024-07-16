@@ -1,4 +1,4 @@
-import { pot_info, chest_info, race_info, npc_info, npc_path_info } from "./raw_data.js"
+import { pot_info, chest_info, race_info, npc_info, npc_path_info, quest_item_info } from "./raw_data.js"
 import location_info from "./csv_data.js";
 
 export const pot_markers = pot_info.map(({ pos, id }) => {
@@ -38,3 +38,10 @@ export const npc_paths = npc_path_info.map(({ path_points, name }) => {
     return line;
 });
 export const npc_path_layer = L.layerGroup(npc_paths);
+
+export const quest_item_markers = quest_item_info.map(({ pos, name }) => {
+    const marker = L.marker(pos, { title: `${name}` });
+    marker.bindPopup(`${name}`);
+    return marker;
+})
+export const quest_item_layer = L.layerGroup(quest_item_markers);

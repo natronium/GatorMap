@@ -1,4 +1,4 @@
-import { pot_layer, chest_layer, race_layer, npc_layer, npc_path_layer } from "./markers.js";
+import { pot_layer, chest_layer, race_layer, npc_layer, npc_path_layer, quest_item_layer } from "./markers.js";
 
 //unmapped, tl corner = 85,-180, BR= -85, 180
 //ingame coords TL= -165, 315. BR = 315, -165
@@ -21,7 +21,7 @@ let graticule_layer = L.layerGroup([graticuleOverlay]);
 
 let map = L.map('map', {
   crs: L.CRS.GatorCRS,
-  layers: [pot_layer, chest_layer, race_layer, npc_layer, npc_path_layer, graticule_layer]
+  layers: [pot_layer, chest_layer, race_layer, npc_layer, npc_path_layer, quest_item_layer, graticule_layer]
 }).setView([75, 75], 2);
 
 L.tileLayer('maptiles/{z}/{x}_{y}.png', {
@@ -36,10 +36,11 @@ let layerControl = L.control.layers({}, {
   "Races": race_layer,
   "NPCs": npc_layer,
   "NPC Paths": npc_path_layer,
+  "Quest Items": quest_item_layer,
   "Grid": graticule_layer,
 }).addTo(map);
 
-let searchable_layers = L.layerGroup([pot_layer, chest_layer, race_layer, npc_layer]);
+let searchable_layers = L.layerGroup([pot_layer, chest_layer, race_layer, npc_layer, quest_item_layer]);
 
 L.control.search({
   layer: searchable_layers,
